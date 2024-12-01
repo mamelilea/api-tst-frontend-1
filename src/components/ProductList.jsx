@@ -10,7 +10,7 @@ const ProductList = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/products', {
+        axios.get('https://3b83-175-45-190-8.ngrok-free.app/api/products', {
             headers: { 'ngrok-skip-browser-warning': 'true' }
         })
             .then(response => setProducts(response.data))
@@ -20,7 +20,7 @@ const ProductList = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/products/${id}`);
+            await axios.delete(`https://3b83-175-45-190-8.ngrok-free.app/api/products/${id}`);
             setProducts(products.filter(product => product.id !== id));
         } catch (error) {
             console.error("Error deleting product:", error);

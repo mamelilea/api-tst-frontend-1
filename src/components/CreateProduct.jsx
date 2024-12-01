@@ -24,7 +24,7 @@ const CreateProduct = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/products', formData);
+            await axios.post('https://3b83-175-45-190-8.ngrok-free.app/api/products', formData);
             navigate('/');
         } catch (error) {
             console.error('Error adding product:', error);

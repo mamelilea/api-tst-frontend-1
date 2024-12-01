@@ -21,7 +21,7 @@ const EditProduct = () => {
             try {
                 console.log("Fetching product with ID:", id);
                 // Pastikan ID dalam format yang benar
-                const response = await axios.get(`http://localhost:5000/api/products/${id.trim()}`);
+                const response = await axios.get(`https://3b83-175-45-190-8.ngrok-free.app/api/products/${id.trim()}`);
                 console.log("Response data:", response.data);
 
                 // Pastikan semua field yang dibutuhkan ada
@@ -65,7 +65,7 @@ const EditProduct = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:5000/api/products/${id}`, formData);
+            await axios.put(`https://3b83-175-45-190-8.ngrok-free.app/api/products/${id}`, formData);
             navigate('/');
         } catch (error) {
             console.error('Error updating product:', error);
