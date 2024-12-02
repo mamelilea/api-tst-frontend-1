@@ -1,16 +1,12 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ProductList from './components/ProductList';
-import CreateProduct from './components/CreateProduct';
-import EditProduct from './components/EditProduct';
+import ProductLandingPage from './components/ProductLandingPage';
 
 function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path="/" element={<ProductList />} />
-                <Route path="/create-product" element={<CreateProduct />} />
-                <Route path="/edit-product/:id" element={<EditProduct />} />
+                <Route path="/" element={<ProductLandingPage />} />
             </Routes>
         </div>
     );
